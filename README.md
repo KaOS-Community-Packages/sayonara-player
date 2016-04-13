@@ -3,3 +3,5 @@ Is a small, clear and fast audio player for Linux written in C++, supported by t
 
 
 http://sayonara-player.com
+
+install: kcp -i sayonara-player
