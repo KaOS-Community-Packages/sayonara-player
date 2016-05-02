@@ -1,6 +1,6 @@
 pkgname=sayonara-player
-pkgver=20160424
-_pkgver=0.8.3
+pkgver=20160501
+_pkgver=0.8.3-git2
 pkgrel=1
 pkgdesc="Is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework. It uses Gstreamer as audio backend."
 arch=( 'x86_64')
@@ -9,8 +9,8 @@ license=('GPL3')
 depends=('qt5-base' 'taglib' 'sqlite' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'libmtp')
 optdepends=('lame' 'gst-plugins-ugly')
 makedepends=('cmake' 'qt5-tools')
-source=("https://sayonara-player.com/sw/sayonara-player-${_pkgver}-git0-${pkgver}.tar.gz")
-md5sums=('39c83575e9721186ca51e747dddfd8d7')
+source=("https://sayonara-player.com/sw/sayonara-player-${_pkgver}-${pkgver}.tar.gz")
+md5sums=('36859aa5e9cd9ca2581e902324922099')
 
 build() {
     cd $srcdir/$pkgname
