@@ -1,5 +1,5 @@
 pkgname=sayonara-player
-pkgver=20160606
+pkgver=20160607
 _pkgver=0.9.0-git3
 pkgrel=1
 pkgdesc="Is a small, clear and fast audio player for Linux written in C++, supported by the Qt framework."
@@ -10,8 +10,7 @@ depends=('qt5-base' 'taglib' 'gst-plugins-base' 'libmtp')
 optdepends=('lame' 'gst-plugins-ugly')
 makedepends=('cmake' 'qt5-tools')
 source=("https://sayonara-player.com/sw/sayonara-player-${_pkgver}-${pkgver}.tar.gz")
-md5sums=('0c94ed4918ee263cec860c6afb42edf4')
-
+md5sums=('7ee68ec48275b01b0f0bfb31a0dc2d01')
 
 build() {
     cd $pkgname
