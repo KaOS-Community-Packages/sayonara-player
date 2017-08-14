@@ -6,20 +6,21 @@ pkgdesc="Sayonara is a small, clear and fast audio player for Linux written in C
 arch=( 'x86_64')
 url="http://sayonara-player.com"
 license=('GPL3')
-depends=('qt5-base' 'taglib' 'gst-plugins-base' 'libmtp')
-optdepends=('lame' 'gst-plugins-ugly')
+depends=('qt5-base' 'taglib' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'libmtp' 'zlib')
+optdepends=('lame: mp3 converter, broadcasting' 'gst-plugins-ugly: mp3 converter, broadcasting')
 makedepends=('cmake' 'qt5-tools')
 source=("https://sayonara-player.com/sw/sayonara-player-${_pkgver}-${pkgver}.tar.gz")
 md5sums=('9581bb4157a687b561558baf60aa83b6')
 
 build() {
-    cd $pkgname
-    mkdir -p build && cd build
-    cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE="Release"
-    make
+cd "$srcdir/$pkgname"
+mkdir build
+cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE="Release"
+make
 }
 
 package() {
-        cd $pkgname/build
-        make DESTDIR="$pkgdir/" install
+cd "$srcdir/$pkgname/build"
+make DESTDIR="$pkgdir/" install
 }
